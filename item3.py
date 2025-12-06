@@ -31,14 +31,11 @@ for k in range(-N_half, N_half + 1): # перебираем гармоники �
 k_array = np.array(k_list)
 c_array = np.array(c_list)
 
-
-
-fig, ax = plt.subplots(figsize=(8, 8))
+fig, ax = plt.subplots(figsize=(6, 6))
 ax.set_xlim(-20, 20)
 ax.set_ylim(-25, 15)
 ax.set_aspect('equal')
-ax.grid(True, linestyle='--', alpha=0.5)
-ax.set_title(f"Анимация сердца (N = {N_coeff})")
+ax.axis('off')
 
 vector_lines, = ax.plot([], [], 'b-', lw=1, alpha=0.7)
 trace_line, = ax.plot([], [], 'r-', lw=2)
